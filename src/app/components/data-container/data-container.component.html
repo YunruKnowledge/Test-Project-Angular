@@ -1,0 +1,50 @@
+
+
+
+
+<div class="data_container" *ngFor="let data of dbData">
+    <div class="wrapper" *ngIf="!data.image_url">
+        <b *ngIf="data.title"> 
+            {{data.title}}
+        </b>
+        <p *ngIf="data.content"> 
+            {{data.content}}
+        </p>
+        <p *ngIf="data.content_2"> 
+            {{data.content_2}}
+        </p>
+        <p *ngIf="data.content_3"> 
+            {{data.content_3}}
+        </p>
+        <p *ngIf="data.content_4"> 
+            {{data.content_4}}
+        </p>
+        <footer *ngIf="data.footer"> 
+            {{data.footer}}
+        </footer>
+    </div>
+
+    <div class="wrapper" *ngIf="data.image_url">
+        <img src="{{data.image_url}}" alt="">
+        <div class="padding">
+            <b *ngIf="data.title"> 
+                {{data.title}}
+            </b>
+            <p *ngIf="data.content"> 
+                {{data.content}}
+            </p>
+            <p *ngIf="data.content_2"> 
+                {{data.content_2}}
+            </p>
+            <p *ngIf="data.content_3"> 
+                {{data.content_3}}
+            </p>
+            <p *ngIf="data.content_4"> 
+                {{data.content_4}}
+            </p>
+            <footer *ngIf="data.footer"> 
+                {{data.footer}}
+            </footer>
+        </div>
+    </div>
+</div>

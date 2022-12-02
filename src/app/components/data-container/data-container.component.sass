@@ -1,0 +1,39 @@
+
+
+
+.data_container
+    font-size: 1.25rem
+    background-color: #eee
+    border-radius: 4px
+    border-top: 0.25rem red solid
+    overflow: hidden
+    display: flex
+
+b
+    font-size: 1.25em
+
+footer
+    display: block
+    font-size: 0.80em
+    margin-top: auto
+    &::before
+        content: "*"
+
+img
+    width: 16ch
+    aspect-ratio: 1/1
+    object-fit: contain
+
+.padding 
+    padding: 1em
+
+.wrapper, .padding
+    display: flex
+    height: auto
+    flex-direction: column
+    padding: 1em
+    max-width: 30vw
+
+.wrapper:has(img)
+    flex-direction: row
+    padding: 0
