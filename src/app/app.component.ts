@@ -6,7 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  
+
+  navbarClick(target:string) {
+    window.location.href = target
+  }
+
   tohoVote_btn() {
     window.location.href = ""
   }
