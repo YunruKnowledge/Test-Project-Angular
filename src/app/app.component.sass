@@ -19,6 +19,51 @@
     background-size: 300px 250px
     font-family: 'Cherry Swash', 'Times New Roman', Times, serif
 
+$navbar_item_pad: 0.5em
+nav
+    position: sticky
+    top: 0
+    z-index: 1
+    background-color: color.$white
+    border-bottom: 2px solid color.$prime_dark
+    display: flex
+    gap: 0.5vw
+    justify-content: center
+    padding: 0 2vw
+    font-family: "GN Kill Gothic", sans-serif, serif
+    box-shadow: 0 0 2px 1vw rgba(color.$black , 0.25)
+    a
+        cursor: pointer
+        display: block
+        font-size: 1.25rem
+        transition: 80ms
+        padding: $navbar_item_pad $navbar_item_pad calc( $navbar_item_pad - 0.1em ) $navbar_item_pad
+        &:hover
+            background-color: color.$black
+            color: color.$white
+            opacity: 1
+        &:nth-of-type(1)
+            opacity: 0.2
+        &:nth-of-type(2)
+            opacity: 0.4
+        &:nth-of-type(3)
+            opacity: 0.6
+        &:nth-of-type(4)
+            opacity: 0.8
+
+        &:nth-of-type(9)
+            opacity: 0.2
+        &:nth-of-type(8)
+            opacity: 0.4
+        &:nth-of-type(7)
+            opacity: 0.6
+        &:nth-of-type(6)
+            opacity: 0.8
+    .current
+        background-color: color.$black
+        color: color.$white
+            
+
 $banner_top_pad: 10vh
 .banner
     display: flex
