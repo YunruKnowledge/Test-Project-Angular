@@ -46,6 +46,11 @@ $banner_top_pad: 10vh
         color: color.$white
         .banner_title
             display: block
+            margin: 0.15em 0
+        .footer
+            font-size: 0.5em
+            translate: 0 0.15em
+            display: block
 
     .logo
         width: 30vw
@@ -61,6 +66,94 @@ $banner_top_pad: 10vh
         img
             width: 20vw
             min-width: 20rem
+
+.paper
+    background-color: color.$paper_base
+    background-image: url("https://i.imgur.com/zuWGzy3.png")
+    background-size: 20%
+    box-sizing: border-box
+    max-width: 80%
+    min-width: 120ch
+    padding: 2vw
+    margin: 2vw auto
+    .paper_border
+        border: 0.25rem solid color.$paper_border
+        padding: 3vw
+        .paper_content
+            background-color: color.$paper_overlay_1
+            padding: 3vw
+            position: relative
+            font-size: 1.5rem
+            >.title
+                color: color.$toho_prime
+                width: max-content
+                font-size: 3rem
+                font-weight: 700
+                position: absolute
+                left: 50%
+                translate: -50% calc( -50% - 3vw )
+                isolation: isolate
+                &::before
+                    content: ""
+                    position: absolute
+                    background-color: color.$paper_overlay_2
+                    width: 1.313em
+                    height: 1.313em
+                    rotate: 45deg
+                    left: 50%
+                    translate: -50%
+                    z-index: -1
+                &::after
+                    content: "Invitation"
+                    display: block
+                    position: absolute
+                    width: max-content
+                    left: 50%
+                    translate: -50% -25%
+                    background-color: color.$toho_second
+                    padding: 0em 0.5em
+                    font-size: 0.4em
+                    font-weight: 400
+                    color: color.$paper_base
+            p
+                margin: 0.5em
+            .schedule
+                background-color: color.$paper_overlay_2
+                margin: auto
+                margin-top: 2vw
+                padding: 2vw
+                text-align: center
+                font-size: 2rem
+                color: color.$toho_prime
+                .title
+                    font-weight: 700
+                    font-size: 1.25em
+                .time
+                    margin-top: -0.25em
+                    span
+                        &:first-of-type
+                            display: block
+                            translate: 0 0.25em
+            .button
+                text-decoration: none
+                display: block
+                width: max-content
+                margin: auto
+                margin-top: 2vw
+                color: color.$white
+                font-weight: 700
+                padding: 0.75em 1em
+                background-color: color.$toho_prime
+                transition: 200ms
+                cursor: pointer
+                clip-path: polygon(0 0, calc( 100% - 1em ) 0%, 100% 1em, 100% 100%, 1em 100%, 0 calc( 100% - 1em ))
+                &:hover                
+                    clip-path: polygon(0 0, 100% 0%, 100% 0em, 100% 100%, 0em 100%, 0 100%)
+                    text-shadow: 0 0 0.25em rgba(color.$paper_base, 0.5)
+
+                        
+
+                
 
 .display
     padding: 2vw 0
